@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<!-- We give our app a name so Angular can take over -->
+<html ng-app="navRoutes">
+<head>
+	<title></title>
+	<style type="text/css" media="screen">
+		.page {
+			margin-top: 50px;
+		}
+		/* The starting CSS styles for the enter animation */
+.fade.ng-enter {
+  transition:2s linear all;
+  opacity:0;
+}
+
+/* The finishing CSS styles for the enter animation */
+.fade.ng-enter.ng-enter-active {
+  opacity:1;
+}
+.slide-animate.ng-enter, .slide-animate.ng-leave {
+	transition: all linear 8s;
+}
+.alide-animate.ng-enter.ng-enter-active {
+	position:  absolute;
+	left: 1000px;
+}
+.slide-animate.ng-enter {
+	left: 0;
+}
+	</style>
+
+		<!-- Include JQuery b/c bootstrap.js needs it -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+
+		<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+		<!-- Optional theme -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+	<!-- Latest compiled and minified JavaScript. Include so our menu collapses/expands -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+	<!-- Angular, -->
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
+	<!-- Icludes routes module so we can use ng-view -->
+	<script src="https://code.angularjs.org/1.5.8/angular-route.min.js"></script>
+	<!-- Include our custom js script which does everything(right now) -->
+	<script src="https://code.angularjs.org/1.5.8/angular-animate.min.js"></script>
+
+	<!-- Keep it clean - modularize -->
+	<script src="js/navModule.js"></script>
+	<script src="js/contactController.js"></script>
+	<script src="js/locationsController.js"></script>
+	<script src="js/aboutController.js"></script>
+</head>
+
+<body ng-controller="navController">
+
+	<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+		<div class="container">
+			<div class="row">
+				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#theMenu">
+					<span class="sr-only">Toggle Navigation</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				<a class="navbar-brand" href="#/main">
+					Admin Page
+				</a>
+				<div class="collapse navbar collapse" id="theMenu">
+					<ul class="nav navbar-nav">
+						<li>
+							<a href="#/locations">Locations</a>
+						</li>
+						<li>
+							<a href="#/about">About</a>
+						</li>
+						<li>
+							<a href="#/contact">Contacts</a>
+						</li>
+
+					</ul>
+				</div>
+			</div>
+		</div>
+	</nav>
+<!-- 	Make a div for our ng-view to use. This will be empty HTML.
+	We can then populate it with the routes module. With stock 
+	outes, you can only have ONE ng-view on your page. UI-views 
+	is a different story. -->
+	<div class="page slide-animate" ng-view>
+		
+	
+	{{message}}
+</div>
+</body>
+</html>
