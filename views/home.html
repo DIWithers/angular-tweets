@@ -1,1 +1,32 @@
-<!-- <custom-menu></custom-menu> -->
+	<div class="page-header"><h1>#Political Tweets</h1></div>
+
+	<div class="row container central">
+	
+	
+		<div class="col-md-4 trump"><h1>#Trump</h1>
+		<div class="tweetBanner" ng-repeat="tweet in tweets">
+			<img ng-src="{{tweet.user.profile_banner_url}}">
+			
+			<li>"{{tweet.text}}"
+			<footer class="f1"><span class="screenName">{{tweet.user.screen_name}}</span> |  Created: {{tweet.created_at}}</footer></li>
+		</div>
+
+		</div>
+		<div class="col-md-4 hillary"><h1>#Hillary</h1>
+			<div class="tweetBanner" ng-repeat="hillaryTweet in hillaryTweets">
+			<img ng-src="{{hillaryTweet.user.profile_banner_url}}">
+
+			<li>"{{hillaryTweet.text}}" ******
+			<footer class="f1"><span class="screenName">{{hillaryTweet.user.screen_name}}</span> |  Created: {{hillaryTweet.created_at}}</footer></li>
+		</div>
+		</div>
+		<div class="col-md-4 bernie"><h1>#Bernie</h1>
+			<div class="tweetBanner" ng-repeat="bernieTweet in bernieTweets">
+			<img ng-src="{{bernieTweet.user.profile_banner_url}}">
+
+			<li>"{{bernieTweet.text}}" 
+			<footer class="f1"><span class="screenName">{{bernieTweet.user.screen_name}}</span> |  Created: {{bernieTweet.created_at}}</footer></li>
+		</div>
+		</div>
+
+	</div>

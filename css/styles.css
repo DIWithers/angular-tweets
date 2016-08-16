@@ -3,52 +3,77 @@ body {
   background-color: lightblue;
 }
 
-/* line 5, ../compass/sass/styles.scss */
+/* line 6, ../compass/sass/styles.scss */
 img {
   width: 100%;
 }
 
-/* line 8, ../compass/sass/styles.scss */
+/* line 9, ../compass/sass/styles.scss */
 h1 {
   color: white;
   font-size: 50px;
 }
 
-/* line 13, ../compass/sass/styles.scss */
+/* line 14, ../compass/sass/styles.scss */
 .tweetBanner img {
   max-height: 300px;
 }
 
-/* line 17, ../compass/sass/styles.scss */
-.central {
-  height: 100px;
-}
-
-/* line 21, ../compass/sass/styles.scss */
+/* line 22, ../compass/sass/styles.scss */
 .tweetBanner {
   border: 2px solid black;
   margin-bottom: 20px;
   border-radius: 20px;
+  background-color: rgba(13, 50, 139, 0.3);
 }
 
-/* line 26, ../compass/sass/styles.scss */
+/* line 29, ../compass/sass/styles.scss */
 li {
   font-size: 20px;
   font-weight: bold;
   padding: 5px;
 }
 
-/* line 31, ../compass/sass/styles.scss */
+/* line 34, ../compass/sass/styles.scss */
 .page-header {
   position: fixed;
   padding: 0;
   margin: 0;
   background-image: url("../banner.jpeg");
+  background-size: 100%;
   width: 100%;
+  height: 20%;
+  z-index: 10;
 }
 
-/* line 39, ../compass/sass/styles.scss */
+/* line 45, ../compass/sass/styles.scss */
 .f1 {
   font-size: 15px;
   font-style: italic;
+}
+
+/* line 49, ../compass/sass/styles.scss */
+.screenName {
+  color: darkred;
+  font-weight: 900;
+}
+
+/* line 53, ../compass/sass/styles.scss */
+.trump {
+  margin-top: 10%;
+}
+
+/* line 57, ../compass/sass/styles.scss */
+.hillary {
+  margin-top: 10%;
+}
+
+/* line 61, ../compass/sass/styles.scss */
+.central {
+  width: 100%;
+}
+
+/* line 64, ../compass/sass/styles.scss */
+.bernie {
+  margin-top: 10%;
 }

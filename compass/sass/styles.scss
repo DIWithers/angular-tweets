@@ -1,6 +1,7 @@
 //This is the main page for scss
 body {
 	background-color: lightblue;
+
 }
 img {
 	width: 100%;
@@ -14,14 +15,16 @@ h1 {
 	max-height: 300px;
 }
 
-.central{
-	height: 100px;
+// .central{
+// 	height: 100px;
 	
-}
+// }
   .tweetBanner {
 	border: 2px solid black;
 	margin-bottom: 20px;
 	border-radius: 20px;
+	background-color: rgba(13, 50, 139, .3);
+	
 }
 li {
 	font-size: 20px;
@@ -33,10 +36,32 @@ li {
 	padding: 0;
 	margin: 0;
 	background-image: url("../banner.jpeg");
+	background-size: 100%;
 	width: 100%;
+	height: 20%;
+	z-index: 10;
 	
 }
 .f1 {
 	font-size: 15px;
 	font-style: italic;
 }
+.screenName {
+	color: darkred;
+	font-weight: 900;
+}
+.trump {
+	margin-top: 10%;
+	
+}
+.hillary {
+	margin-top: 10%;
+	
+}
+.central {
+	width: 100%
+}
+.bernie {
+	margin-top: 10%;
+}
+
