@@ -8,20 +8,20 @@ tweetApp.directive("customMenu", function() { //camelCase when defined, snake-ca
 	}
 });
 
-tweetApp.config(function($routeProvider) {
-	// at '/', load home.html with home controller
-	$routeProvider.when("/", {
-		templateUrl: "views/home.html",
-		controller: "home.controller"
-	});
-	$routeProvider.when("/trump", {
-		templateUrl: "views/home.html",
-		controller: "trumpController"
-	});
-	$routeProvider.when("/hillary", {
-		templateUrl: "views/home.html",
-		controller: "hillaryController"
-	});
-	$routeProvider.otherwise("/"); 
+// tweetApp.config(function($routeProvider) {
+// 	// at '/', load home.html with home controller
+// 	$routeProvider.when("/", {
+// 		templateUrl: "views/home.html",
+// 		controller: "home.controller"
+// 	});
+// 	$routeProvider.when("/trump", {
+// 		templateUrl: "views/home.html",
+// 		controller: "trumpController"
+// 	});
+// 	$routeProvider.when("/hillary", {
+// 		templateUrl: "views/home.html",
+// 		controller: "hillaryController"
+// 	});
+// 	$routeProvider.otherwise("/"); 
 
-});
+// });

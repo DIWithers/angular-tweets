@@ -7,20 +7,36 @@
 	<script type="text/javascript" src="https://code.angularjs.org/1.5.8/angular-cookies.min.js"></script>
 	<script type="text/javascript" src="https://code.angularjs.org/1.5.8/angular-route.min.js"></script>
 
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+	<link rel="stylesheet" href="css/styles.css">
+
+
+	<script type="text/javascript" src="js/tweets.js"></script>
 	<script type="text/javascript" src="js/tweetModule.js"></script>
 	<script type="text/javascript" src="js/tweetController.js"></script>
+	<!-- <script type="text/javascript" src="js/homeController.js"></script>
+	<script type="text/javascript" src="js/trumpController.js"></script> -->
+
 
 
 </head>
+	<div class="page-header"><h1>#Trump Tweets</h1></div>
 
-<body ng-controller="tweetController">
-<!-- <tweet-hello></tweet-hello>
-<div  turn-me-blue hello-attr></div>
-<div class="hello-class"></div>
-<input type="text" ng-model="myColor" name="">
-<div turn-me-blue>Hover over me and I will console. I'm a custom directive.</div>
- -->
- <custom-menu></custom-menu>
+	<div class="container central">
+	
+	<body ng-controller="tweetController">
+		<div>
+		<div class="tweetBanner" ng-repeat="tweet in tweets">
+			<img ng-src="{{tweet.user.profile_banner_url}}">
+
+			<li>Content: {{tweet.text}}
+			<footer class="f1">Created: {{tweet.created_at}}</footer></li>
+		</div>
+
+		</div>
+	</div>
  <div ng-view></div>
+
 </body>
 </html>
